@@ -306,7 +306,7 @@ body {
     position: absolute;
     z-index: 5;
     background: radial-gradient(circle, rgba(81, 23, 83, 0.7045068393568366) 5%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%), url(./img/testimonial-bg.jpg);
-    width: 100%;
+    width: 100vw;
     height: 270px;
     top: 80%;
     text-align: center;
@@ -330,6 +330,7 @@ body {
 
 .testimonial .name {
     margin-top: 2rem;
+    width:100vw
     font-style: italic;
 }
 
