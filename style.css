@@ -1,0 +1,590 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ##################utility class #################### */
+
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ######################## navbar ##################  */
+
+.navbar {
+    position: absolute;
+    width: 100vw;
+    z-index: 200;
+    margin-top: 3rem;
+}
+
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.logo {
+    order: 1;
+    margin-left: 3rem;
+
+}
+
+.nav-items {
+    order: 2;
+    margin-right: 3rem;
+}
+
+.logo i {
+    font-size: 3rem;
+    margin: 1rem;
+    color: rgb(198, 198, 198);
+}
+
+.nav-items a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(198, 198, 198);
+    display: inline-block;
+    margin: 2rem 2rem;
+    font-size: 2rem;
+
+}
+
+.navbar .hamburger-menu input[type="checkbox"] {
+    display: block;
+    height: 32px;
+    width: 40px;
+    top: 7px;
+    z-index: 1;
+    opacity: 0;
+    position: relative;
+}
+
+.hamburger-contents {
+    position: absolute;
+    background-color: #f9f9f98d;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0rem;
+    text-align: right;
+    z-index: 1;
+    top: 4rem;
+    right: 0.1rem;
+    display: none;
+}
+.hamburger-menu:hover .hamburger-contents{
+    display: block;
+}
+
+.hamburger-contents li {
+    list-style: none;
+}
+
+.hamburger-contents li:hover{
+    background: rgba(255, 255, 255, 0.429);
+}
+
+.hamburger-contents li a {
+    color: black;
+}
+
+
+
+.hamburger-menu {
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-menu .hamburger-lines {
+    height: 32px;
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hamburger-lines .lines {
+    position: relative;
+    display: block;
+    background-color: rgb(198, 198, 198);
+    width: 90%;
+    height: 4px;
+}
+
+/* #################### header #####################  */
+
+#header-container {
+    position: relative;
+
+}
+
+#header-container img {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+
+}
+
+.header-container::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.552);
+    z-index: 2;
+}
+
+#header-container .header-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100;
+}
+
+.header-contents h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    font-style: italic;
+    color: rgb(170, 170, 170);
+}
+
+.header-contents h1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: rgb(198, 198, 198);
+}
+
+.header-contents .btn {
+    font-size: 2rem;
+    display: inline-block;
+    color: rgb(198, 198, 198);
+    border: 3px solid rgb(198, 198, 198);
+    padding: 1rem 3rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header-contents p,
+.header-contents p a {
+    font-size: 1.5rem;
+    color: rgb(198, 198, 198);
+    text-transform: uppercase;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$ first wrapper $$$$$$$$$$$$$$$$$$  */
+
+.benifit-wrapper {
+    display: flex;
+}
+
+.benifit-wrapper .first-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5rem 4rem;
+}
+
+.first-wrapper i {
+    font-size: 5rem;
+    color: rgb(255, 83, 83);
+    border: 3px solid rgb(83, 83, 83);
+    border-radius: 50%;
+    padding: 2rem;
+    margin: 1.5rem;
+}
+
+.first-wrapper h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(255, 83, 83);
+}
+
+.first-wrapper p {
+    font-size: 1.5em;
+    color: rgb(135, 134, 134);
+}
+
+
+/* ######################## mobile app description #######################  */
+.testi-desc {
+    /* border: 5px solid red; */
+    height: 80rem;
+}
+
+.bg-change {
+    background: rgb(235, 235, 235);
+    position: relative;
+}
+
+.mobile-view {
+    position: relative;
+    margin: 5rem 0;
+}
+
+.mobile-view .in-mobile-view {
+    display: block;
+    position: absolute;
+    width: 234px;
+    height: 78%;
+    left: 42px;
+    top: 58px;
+    object-fit: cover;
+    object-position: left;
+    border: 3px solid rgb(191, 189, 189);
+    border-radius: 2%;
+}
+
+.app-details {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-view-description {
+    margin: 10rem 2rem;
+}
+
+.mobile-view-description h2 {
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(255, 83, 83);
+    margin-bottom: 2rem;
+}
+
+.mobile-view-description p {
+    color: rgb(135, 134, 134);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+
+}
+
+.mobile-view-description .app-store-logo {
+    display: inline-block;
+    width: 100px;
+
+
+}
+
+.mobile-view-description .google-play-logo {
+    display: inline-block;
+    width: 100px;
+
+}
+
+.testimonial {
+    position: absolute;
+    z-index: 5;
+    background: radial-gradient(circle, rgba(81, 23, 83, 0.7045068393568366) 5%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%), url(./img/testimonial-bg.jpg);
+    width: 100vw;
+    height: 270px;
+    top: 80%;
+    text-align: center;
+    font-size: 2rem;
+    color: grey;
+    font-weight: 100;
+
+}
+
+.testimonial img {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+    object-position: center;
+    margin: 3rem 50%;
+    transform: translate(-50%, 0);
+}
+
+.testimonial .name {
+    margin-top: 2rem;
+    width: 100vw;
+    font-style: italic;
+}
+
+.testimonial {
+    /* border: 4px solid red; */
+    /* width: 100%; */
+    /* height: 100%; */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+}
+
+.testimonial::-webkit-scrollbar {
+    display: none;
+}
+
+footer p {
+    top: 250px;
+    z-index: 300;
+}
+
+/* ##################### menu items $$$$$$$$$$$$$$$$$$$$$$4  */
+
+.food-menu {
+    margin: 0 1rem;
+    display: grid;
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* grid-row-gap: 0; */
+}
+
+.food {
+    text-align: center;
+}
+
+.food h1 {
+    display: inline-block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(255, 83, 83);
+    margin: 5rem auto;
+}
+
+.food-menu-content {
+    position: relative;
+}
+
+.food-menu-content img {
+    position: relative;
+    /* border: 2px solid red; */
+    filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 5/5;
+    z-index: 18;
+}
+
+.food-menu-content h3 {
+    position: absolute;
+    z-index: 25;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: azure;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1)
+}
+
+.food-menu-content h2 {
+    position: absolute;
+    z-index: 26;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: azure;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+footer {
+    margin-top: 5rem;
+    background: black;
+    color: white;
+    padding: 2rem;
+    bottom: 0;
+    font-size: 1.5rem;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%% totals section $$$$$$$$$$$$$$$$$$$$$$$  */
+
+#totals {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.totals-box h2 {
+    font-size: 3rem;
+}
+
+.totals-box h3 {
+    font-size: 1rem;
+    color: rgb(146, 145, 145);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########################## media queries ##########################  */
+
+@media (max-width:1000px) {
+    html {
+        font-size: 50%;
+    }
+
+    .testimonial {
+        font-size: 3rem;
+    }
+
+    .testi-desc {
+        height: 100rem;
+    }
+}
+
+@media (max-width:700px) {
+    .benifit-wrapper {
+        flex-direction: column;
+    }
+
+    .mobile-view-description p:nth-child(2),
+    .mobile-view-description p:nth-child(3) {
+        display: none;
+    }
+
+    .testi-desc {
+        height: 63rem;
+    }
+
+    .mobile-view-description {
+        text-align: center;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    .testimonial {
+        height: 250px;
+        font-size: 2rem;
+    }
+
+    .food-menu h2 {
+        font-size: 2rem;
+    }
+
+    .food-menu h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:500px) {
+    .navbar-container a {
+        font-size: 1.8rem;
+        margin: 3rem 1rem;
+    }
+
+    .navbar-container .hamburger-lines .lines {
+        width: 70%;
+        height: 2px;
+    }
+
+    .navbar .hamburger-menu input[type="checkbox"] {
+        display: block;
+        height: 32px;
+        width: 40px;
+        top: 12px;
+        right: 7px;
+        z-index: 5;
+        opacity: 0;
+        position: relative;
+    }
+
+
+    .benifit-wrapper .first-wrapper {
+        padding: 0 1rem;
+        margin-top: 0;
+    }
+
+    .testi-desc {
+        height: 57rem;
+    }
+
+    .testimonial {
+        height: 200px;
+    }
+
+    .testimonial img {
+        margin: 1rem 50%;
+    }
+
+    .food-menu {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* grid-row-gap: 0; */
+    }
+
+    .food-menu div:first-child {
+        display: none;
+    }
+
+    .totals-box h2 {
+        font-size: 1.7rem;
+    }
+
+    .totals-box h3 {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+}
+
+/* ############################## landscape###########  */
+
+@media (orientation: landscape) and (max-height:500px) {
+    #header-container .header-contents {
+        top: 180px;
+    }
+}
